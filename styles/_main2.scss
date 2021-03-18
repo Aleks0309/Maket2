@@ -1,0 +1,31 @@
+// $images: (
+//     audi : "../img/img1-audi.jpg",
+//     book : "../img/img2-book.jpg",
+//     hand : "../img/img3-hand.jpg"
+// );
+// @each $key, $value in $images {
+//     .main__inner:nth-child(odd) {
+//         background-image: url($value);
+//         background-size: cover;
+//     }
+// }
+    
+// @each $key $value in $images {
+//     .main__inner-#{$key} {
+//         background-image: url($value);
+//     }        
+// }
+
+// $images: (
+//     pc : "../img/img1-audi.jpg", 
+//     pc2 : "../img/img2-book.jpg", 
+//     pc3 : "../img/img3-hand.jpg"
+// );
+
+// @for $i from 0 through 2{
+//     .main__inner:nth-child(#{2 * $i + 1}){
+//         background-image: url(map-get($images, pc))        
+//     }    
+// }
+    
+    

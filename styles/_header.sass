@@ -1,0 +1,33 @@
+.header
+    margin-left: calc(15% + 100px)
+    color: $text-color
+    height: 100vh
+    @include flex(flex, column, nowrap, center, flex-start)
+    h2
+        font-size: 50px
+        margin: 0px
+        color: $text-color-w
+    p
+        font-size: 30px
+        margin: 60px 0px
+        a
+            text-decoration: none
+            color: $text-color
+            border-bottom: 1px dotted white            
+            &:hover
+                color: $text-color-w
+                border-bottom: 0px 
+                @include transition(color, 0.5s, ease)               
+
+.button
+    font-size: 10px
+    border: 1px solid $text-color
+    border-radius: 15px
+    padding: 15px 30px
+    text-transform: uppercase
+    @include transition(background-color, 0.5s, ease)
+    &:hover
+        cursor: pointer
+        background-color: rgba(255, 255, 255, 0.3)
+        border-color: $text-color-w
+        color: $text-color-w

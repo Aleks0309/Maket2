@@ -1,0 +1,57 @@
+
+.about
+    margin-left: 15%
+    background-color: #b74e91
+    padding: 0px 80px
+    color: $text-color
+    @include flex(flex, column, wrap, center, flex-start)
+    h2
+        font-size: 30px
+        color: $text-color-w
+        margin: 80px 0px 0px 0px
+    p
+        font-size: 20px
+        margin: 40px 0px
+    .about__table
+        border: 1px solid $text-color
+        border-radius: 10px        
+        @include flex(flex, row, wrap, center, flex-start)
+        .about__table__inner
+            width: 50%
+            padding: 30px 30px 30px 120px
+            position: relative
+            border-top: 1px solid $text-color
+            background-color: #ffffff1a
+            p
+                font-size: 20px      
+            &:nth-child(-n + 2)
+                border-top: 0px
+            &:nth-child(2n)
+                border-left: 1px solid $text-color              
+            h3
+                color: $text-color-w
+                font-size: 22px 
+    .button
+        margin: 30px 0px 60px 0px             
+                                       
+$icons-about: '\f121', '\f512', '\e801', '\e802', '\f07b', '\f219' 
+
+@for $i from 1 through length($icons-about)
+    $thisIcon: nth($icons-about, $i)
+    .about__table__inner:nth-child(#{$i})
+        &:before
+            font-family: "fontello"
+            content: "#{$thisIcon}"
+            position: absolute
+            height: 30px
+            width: 30px
+            text-align: center
+            background-color: #fff
+            color: #b74e91
+            font-weight: bolder
+            font-size: 25px
+            line-height: 30px            
+            border-radius: 50%
+            padding: 5px
+            left: 60px
+            top: 40px     

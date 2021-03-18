@@ -1,0 +1,87 @@
+.contacts
+    margin-left: 15%
+    background-color: #5e42a6
+    padding: 60px 80px
+    color: $text-color
+    @include flex(flex, column, wrap, center, flex-start)
+    h2
+        margin: 0px
+        font-size: 30px
+        color: $text-color-w
+    p
+        font-size: 20px
+        margin: 30px 0px
+
+label
+    display: block
+    font-size: 22px
+    color: $text-color-w
+    margin: 10px 0px
+
+
+.contacts__forms
+    width: 100%
+    @include flex(flex, row, wrap, center, stretch)
+    form
+        width: 65% 
+        border-right: 1px solid $text-color                      
+    .contact
+        width: calc(35% - 20px)
+
+.fields
+    @include flex(flex, row, wrap, flex-start, stretch)    
+    .field
+        width: calc(100% - 5px)
+    .half
+        width: calc(50% - 5px)
+    .button
+        margin: 30px 0px 60px 0px  
+    
+
+.form
+    width: calc(100% - 20px)
+    @include user(#664baa, white, 0px)
+    padding: 5px
+    font-size: 20px  
+    border: 1px solid $text-color
+    border-radius: 5px
+    &:focus
+        outline: 0px
+        border-color: $text-color-w
+        box-shadow: 0 0 4px
+
+.contact
+    @include flex(flex, column, wrap, flex-start, flex-start)
+    margin-left: 20px
+    .social
+        @include flex(flex, row, wrap, flex-start, flex-start)
+    h3
+        margin: 0px
+        color: $text-color-w
+    p
+        margin-top: 20px
+        a
+            text-decoration: none
+            color: $text-color
+            border-bottom: 1px dotted $text-color
+            &:hover
+                color: $text-color-w
+
+$social-icon: '\f303', '\f300', '\e800', '\f31e', '\f31a'
+
+@for $i from 1 through length($social-icon)
+    $this_s_icon: nth($social-icon, $i)
+    .social__item:nth-child(#{$i})
+        margin-top: 20px        
+        &:before
+            font-family: "fontello"
+            content: "#{$this_s_icon}"
+            font-size: 18px
+        &:not(:last-child)
+            margin-right: 15px
+        &:hover
+            cursor: pointer
+            color: $text-color-w 
+            @include transition(color, 0.5s, ease)           
+                
+     

@@ -1,0 +1,43 @@
+.menu
+    position: fixed
+    background-color: rgb(49, 36, 80)    
+    height: 100vh
+    width: 15%
+    @media (max-width: 760px)
+        width: 100%
+        height: 10%      
+    .navigation
+        height: 100vh
+        margin: 0px        
+        @include flex(flex, column, nowrap, center, center)
+        @media (max-width: 760px)
+            @include flex(flex, row, nowrap, center, center) 
+        .navigation__item 
+            padding: 10px 0px
+            width: calc(100% - 60px)
+            text-transform: uppercase
+            text-align: right
+            font-size: 13px 
+            &:after
+                content: ""
+                position: absolute 
+                margin: 20px 30px                      
+                width: calc(100% - 60px)
+                height: 2px
+                left: 0px
+                background-color: #493382                                
+            &:hover                         
+                &:after                   
+                    background-image: linear-gradient(to right, #5e42a6, #b74e91)
+                    
+            a
+                color: $text-color
+                text-decoration: none                
+                &:hover
+                    color: $text-color-w
+                    @include transition(color, 0.5s, ease)
+    
+    @media (max-width: 760px)
+        
+
+                        

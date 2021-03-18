@@ -1,0 +1,76 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "4c01f5d3ba5fbf029bca8630cce41e6a",
+      "css": "twitter-bird",
+      "code": 62211,
+      "src": "brandico"
+    },
+    {
+      "uid": "240979dd9fcf2e46250e66792edb8092",
+      "css": "facebook",
+      "code": 62208,
+      "src": "brandico"
+    },
+    {
+      "uid": "ff16079eb4be12c49bf3014d2322acdd",
+      "css": "github-circled",
+      "code": 59392,
+      "src": "zocial"
+    },
+    {
+      "uid": "542e3f055aaa4ddfb9ab3e00397db47f",
+      "css": "linkedin",
+      "code": 62234,
+      "src": "brandico"
+    },
+    {
+      "uid": "dad4e7f8dc2e57c92cffc0231202d9a0",
+      "css": "instagram",
+      "code": 62238,
+      "src": "brandico"
+    },
+    {
+      "uid": "b7a336095aa4535c3689cb557edf23db",
+      "css": "monitor",
+      "code": 59394,
+      "src": "entypo"
+    },
+    {
+      "uid": "1fb8776fe6f1d3bbf970996fdfcf0f94",
+      "css": "link",
+      "code": 61563,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "7997220c4eb58edae98e04de570089c2",
+      "css": "lock",
+      "code": 62738,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "7336247ba3db350dec8d6c0a47cef966",
+      "css": "cog",
+      "code": 59393,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "f85affb51c357be83d187344c8c6e35c",
+      "css": "diamond",
+      "code": 61977,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "7034e4d22866af82bef811f52fb1ba46",
+      "css": "code",
+      "code": 61729,
+      "src": "fontawesome"
+    }
+  ]
+}

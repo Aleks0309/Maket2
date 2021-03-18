@@ -1,0 +1,44 @@
+.main
+    margin-left: 15%
+    @include flex(flex, row, wrap, flex-start, flex-start)
+    .main__inner
+        @include flex(flex, column, wrap, center, flex-start)
+        color: $text-color
+        height: 300px
+        &:nth-child(even)
+            width: 70% 
+            padding: 0px 80px                      
+        &:nth-child(odd)
+            width: 30%            
+        &:nth-child(1)
+            background-image: url(../img/img1-audi.jpg)
+            background-size: cover
+        &:nth-child(3)
+            background-image: url(../img/img2-book.jpg)
+            background-size: cover
+        &:nth-child(5)
+            background-image: url(../img/img3-hand.jpg)
+            background-size: cover
+        h2
+            color: $text-color-w
+            margin: 0px
+            font-size: 30px
+        p
+            margin: 40px 0px
+            font-size: 20px
+            
+
+$base-color: #6264bd
+@for $i from 1 through 3
+    .main__inner:nth-child(#{$i + $i})
+        background-color: darken($base-color, $i * 5%)
+
+
+     
+    
+
+
+     
+
+
+   
