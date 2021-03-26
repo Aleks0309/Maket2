@@ -2,38 +2,67 @@
 .about
     margin-left: 15%
     background-color: #b74e91
-    padding: 0px 80px
+    padding: 70px 70px 35px
     color: $text-color
     @include flex(flex, column, wrap, center, flex-start)
     h2
         font-size: 30px
         color: $text-color-w
-        margin: 80px 0px 0px 0px
+        margin-bottom: 16px
     p
-        font-size: 20px
-        margin: 40px 0px
+        font-size: 17px
+        margin: 0px 0px 35px 0px
     .about__table
         border: 1px solid $text-color
         border-radius: 10px        
         @include flex(flex, row, wrap, center, flex-start)
-        .about__table__inner
-            width: 50%
-            padding: 30px 30px 30px 120px
+        .about__table__inner        
+            padding: 60px 50px 17px 120px
             position: relative
             border-top: 1px solid $text-color
             background-color: #ffffff1a
+            @media ( max-width: 991px )
+                &:first-of-type
+                    border-bottom: 1px solid $text-color  
+            @media ( max-width: 360px )                       
+                padding: 90px 24px 32px
             p
-                font-size: 20px      
+                font-size: 17px      
             &:nth-child(-n + 2)
                 border-top: 0px
             &:nth-child(2n)
-                border-left: 1px solid $text-color              
+                border-left: 1px solid $text-color
+                @media ( max-width: 991px  )
+                    border-left: 0px
+                                  
             h3
                 color: $text-color-w
-                font-size: 22px 
+                font-size: 19px 
+    @media ( max-width: 360px )
+        padding: 48px 32px 16px     
     .button
-        margin: 30px 0px 60px 0px             
-                                       
+        margin-top: 30px
+    @media ( max-width: 991px )
+        margin-left: 0px        
+        h2
+            font-size: 28px
+        h3
+            font-size: 17px
+        p
+            font-size: 16px
+    @media ( max-width: 768px )
+        h2
+            font-size: 20px
+        h3
+            font-size: 16px
+        p
+            font-size: 16px                 
+
+@media ( max-width: 360px )
+    .about__table__inner        
+        padding: 32px 24px  
+
+                                           
 $icons-about: '\f121', '\f512', '\e801', '\e802', '\f07b', '\f219' 
 
 @for $i from 1 through length($icons-about)
@@ -43,8 +72,8 @@ $icons-about: '\f121', '\f512', '\e801', '\e802', '\f07b', '\f219'
             font-family: "fontello"
             content: "#{$thisIcon}"
             position: absolute
-            height: 30px
-            width: 30px
+            height: 40px
+            width: 40px
             text-align: center
             background-color: #fff
             color: #b74e91
@@ -54,4 +83,18 @@ $icons-about: '\f121', '\f512', '\e801', '\e802', '\f07b', '\f219'
             border-radius: 50%
             padding: 5px
             left: 60px
-            top: 40px     
+            top: 50px
+            @media ( max-width: 360px )
+                left: 25px
+                top: 25px     
+        @media ( max-width: 991px )
+            h3
+                font-size: 17px
+            p
+                font-size: 16px
+            a
+                font-size: 16px
+        @media ( max-width: 768px )
+            h3
+                font-size: 16px
+            

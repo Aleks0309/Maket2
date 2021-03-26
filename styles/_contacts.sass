@@ -11,62 +11,91 @@
     p
         font-size: 20px
         margin: 30px 0px
-
+    @media ( max-width: 991px )
+        margin-left: 0px
+        h2
+            font-size: 28px
+        p
+            font-size: 16px
+    @media ( max-width: 768px )
+        h2
+            font-size: 20px
+    @media ( max-width: 360px )        
+        padding: 48px 32px 16px     
 label
     display: block
-    font-size: 22px
+    font-size: 19px
     color: $text-color-w
     margin: 10px 0px
-
+    @media ( max-width: 991px )
+        font-size: 17px
 
 .contacts__forms
     width: 100%
     @include flex(flex, row, wrap, center, stretch)
+    @media ( max-width: 991px)
+        justify-content: flex-start
     form
-        width: 65% 
-        border-right: 1px solid $text-color                      
-    .contact
-        width: calc(35% - 20px)
+        width: 100% 
+        border-right: 1px solid $text-color
+        @media ( max-width: 991px)
+            border-right: 0px
+            border-bottom: 1px solid $text-color
 
 .fields
-    @include flex(flex, row, wrap, flex-start, stretch)    
     .field
-        width: calc(100% - 5px)
-    .half
-        width: calc(50% - 5px)
+        padding-right: 25px
+    @include flex(flex, row, wrap, flex-start, stretch)    
     .button
         margin: 30px 0px 60px 0px  
     
 
-.form
-    width: calc(100% - 20px)
+.form    
     @include user(#664baa, white, 0px)
     padding: 5px
-    font-size: 20px  
+    font-size: 19px  
     border: 1px solid $text-color
     border-radius: 5px
+    width: 100%
     &:focus
         outline: 0px
         border-color: $text-color-w
         box-shadow: 0 0 4px
 
 .contact
+    padding-left: 25px
+    @media ( max-width: 991px)
+        padding-left: 0px
+        padding-top: 25px
     @include flex(flex, column, wrap, flex-start, flex-start)
-    margin-left: 20px
+    
     .social
         @include flex(flex, row, wrap, flex-start, flex-start)
     h3
         margin: 0px
+        font-size: 19px
         color: $text-color-w
     p
         margin-top: 20px
+        font-size: 17px
         a
             text-decoration: none
+            font-size: 17px
             color: $text-color
             border-bottom: 1px dotted $text-color
             &:hover
                 color: $text-color-w
-
+    @media ( max-width: 991px )
+        h3
+            font-size: 17px
+        p
+            font-size: 16px
+            a
+                font-size: 16px
+    @media ( max-width: 768px )
+        h3
+            font-size: 16px
+        
 $social-icon: '\f303', '\f300', '\e800', '\f31e', '\f31a'
 
 @for $i from 1 through length($social-icon)
